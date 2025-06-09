@@ -2,8 +2,6 @@ name: Update README to show seeds-two-cluster
 
 on:
   workflow_dispatch:  # Manual trigger
-  schedule:
-    - cron: '0 4,12,20 * * *'  # Run every 8 hours (offset by 4 hours from random)
 
 jobs:
   update-readme:

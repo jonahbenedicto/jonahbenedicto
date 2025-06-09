@@ -1,4 +1,4 @@
-name: Update README to show gol-glider
+name: Update README to show langtons-random
 
 on:
   workflow_dispatch:  # Manual trigger
@@ -11,10 +11,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       
-    - name: Update README to show gol-glider
+    - name: Update README to show langtons-random
       run: |
-        sed -i 's|<img src="./gol-random.svg"|<img src="./gol-glider.svg"|g' README.md
-        sed -i 's|<img src="./gol-glider.svg"|<img src="./gol-glider.svg"|g' README.md
+        sed -i 's|<img src="./langtons-ant.svg"|<img src="./langtons-random.svg"|g' README.md
+        sed -i 's|<img src="./langtons-random.svg"|<img src="./langtons-random.svg"|g' README.md
       
     - name: Check for changes
       id: verify-changed-files
@@ -31,5 +31,5 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add README.md
-        git commit -m "🕊️ Update README to show glider gol demo"
+        git commit -m "🐜 Update README to show random Langton's ant demo"
         git push
