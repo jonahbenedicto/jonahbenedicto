@@ -13,8 +13,7 @@ jobs:
       
     - name: Update README to show langtons-ant
       run: |
-        sed -i 's|<img src="./langtons-random.svg"|<img src="./langtons-ant.svg"|g' README.md
-        sed -i 's|<img src="./langtons-ant.svg"|<img src="./langtons-ant.svg"|g' README.md
+        sed -i 's|<img src="./langtons-random.svg" alt="Langton'"'"'s Ant"/>|<img src="./langtons-ant.svg" alt="Langton'"'"'s Ant"/>|g' README.md
       
     - name: Check for changes
       id: verify-changed-files

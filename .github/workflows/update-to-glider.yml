@@ -13,8 +13,7 @@ jobs:
       
     - name: Update README to show gol-glider
       run: |
-        sed -i 's|<img src="./gol-random.svg"|<img src="./gol-glider.svg"|g' README.md
-        sed -i 's|<img src="./gol-glider.svg"|<img src="./gol-glider.svg"|g' README.md
+        sed -i 's|<img src="./gol-random.svg" alt="Game of Life"/>|<img src="./gol-glider.svg" alt="Game of Life"/>|g' README.md
       
     - name: Check for changes
       id: verify-changed-files

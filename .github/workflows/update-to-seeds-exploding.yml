@@ -13,8 +13,7 @@ jobs:
       
     - name: Update README to show seeds-exploding
       run: |
-        sed -i 's|<img src="./seeds-random.svg"|<img src="./seeds-exploding.svg"|g' README.md
-        sed -i 's|<img src="./seeds-exploding.svg"|<img src="./seeds-exploding.svg"|g' README.md
+        sed -i 's|<img src="./seeds-random.svg" alt="Seeds"/>|<img src="./seeds-exploding.svg" alt="Seeds"/>|g' README.md
       
     - name: Check for changes
       id: verify-changed-files
