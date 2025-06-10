@@ -1,4 +1,4 @@
-name: Update README to show seeds-two-cluster
+name: Update README to show seeds-exploding
 
 on:
   workflow_dispatch:  # Manual trigger
@@ -11,10 +11,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       
-    - name: Update README to show seeds-two-cluster
+    - name: Update README to show seeds-exploding
       run: |
-        sed -i 's|<img src="./seeds-random.svg"|<img src="./seeds-two-cluster.svg"|g' README.md
-        sed -i 's|<img src="./seeds-two-cluster.svg"|<img src="./seeds-two-cluster.svg"|g' README.md
+        sed -i 's|<img src="./seeds-random.svg"|<img src="./seeds-exploding.svg"|g' README.md
+        sed -i 's|<img src="./seeds-exploding.svg"|<img src="./seeds-exploding.svg"|g' README.md
       
     - name: Check for changes
       id: verify-changed-files
@@ -31,5 +31,5 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add README.md
-        git commit -m "🌱 Update README to show two-cluster seeds demo"
+        git commit -m "🌱 Update README to show exploding seeds demo"
         git push

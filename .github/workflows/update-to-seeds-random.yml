@@ -13,7 +13,7 @@ jobs:
       
     - name: Update README to show seeds-random
       run: |
-        sed -i 's|<img src="./seeds-two-cluster.svg"|<img src="./seeds-random.svg"|g' README.md
+        sed -i 's|<img src="./seeds-exploding.svg"|<img src="./seeds-random.svg"|g' README.md
         sed -i 's|<img src="./seeds-random.svg"|<img src="./seeds-random.svg"|g' README.md
       
     - name: Check for changes
